@@ -1,0 +1,44 @@
+# read detector           +
+# kit class               +
+# event class: tim        +++
+#     _kit: +
+#         _arr of layers: +
+#             _index of that layer in kit; +
+#             _arr of detectors: +
+#                 _index of that detector in layer; +
+#                 _arr of pixels //arr mean vector; +
+#                     _index of that pixel in detector; +
+#     _muon; +
+# create class or struct with smart index in event:
+#     _index in event arr of layer;
+#     _index in arr of detector inside current layer;
+#     _index in arr of pixel -//-;
+# update IsCatch method +++
+#     iscatch take not muon, but event with muon with smart index; +
+#     if that muon go throw that pixel, write it, using smart index; +
+res class:
+    arr of events
+    getter
+    setter
+    constr
+    count of events
+# surface: olga +++
+#     muon* to vector +
+#     add count in constructor +
+#     rewrite CreateMuons
+#     add GetMuon (remember for shield) +
+#     rewrite constr empty +
+#     realize constr param +
+#     set getter const +
+#     set setter param const +
+#     STYLE, OH MY EYES +
+sphere/2: olga
+    define radius
+
+---------------------
+
+#set all getter const+
+
+#set all setter param const+
+
+!!! iscatch work only 4 2d pixels
